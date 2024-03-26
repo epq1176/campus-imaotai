@@ -161,7 +161,7 @@ public class IShopServiceImpl extends ServiceImpl<IShopMapper, IShop> implements
 
         String url = "https://static.moutai519.com.cn/mt-backend/xhr/front/mall/shop/list/slim/v3/";
         url = url  + getCurrentSessionId() + "/" + province + "/" + itemId + "/" + dayTime;
-
+        logger.info(url);
         String urlRes = HttpUtil.get(url);
         JSONObject res = null;
         try {
