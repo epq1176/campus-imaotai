@@ -159,7 +159,7 @@ public class IShopServiceImpl extends ServiceImpl<IShopMapper, IShop> implements
 
         long dayTime = LocalDate.now().atStartOfDay().toInstant(ZoneOffset.of("+8")).toEpochMilli();
 
-        String url = "https://static.moutai519.com.cn/mt-backend/xhr/front/mall/shop/list/slim/v3/"
+        String url = "https://static.moutai519.com.cn/mt-backend/xhr/front/mall/shop/list/slim/v3/";
         url = url  + getCurrentSessionId() + "/" + province + "/" + itemId + "/" + dayTime;
 
         String urlRes = HttpUtil.get(url);
